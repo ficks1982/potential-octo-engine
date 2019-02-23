@@ -1,0 +1,35 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+  <title>clappr-chromecast-plugin Test Page</title>
+  <script type="text/javascript" charset="utf-8">
+Clappr.Log.setLevel(0)
+window.onload = function() {
+  var player = new Clappr.Player({
+    source: 'http://clappr.io/highline.mp4',
+    poster: 'http://clappr.io/poster.png',
+    parentId: '#player-wrapper',
+    width: 640, height: 360,
+    plugins: [ChromecastPlugin],
+    chromecast: {
+      appId: '9DFB77C0',
+      media: {
+        title: 'Awesome Hot Air Balloon Slackline',
+        subtitle: 'You won\'t get much closer to Skylining than this!'
+      }
+    }
+  });
+}
+  </script>
+</head>
+<body>
+  <div align="center">
+    <div id="player-wrapper">
+  </div>
+  </div>
+</body>
+</html>
