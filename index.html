@@ -7,10 +7,9 @@
   <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
   <title>clappr-chromecast-plugin Test Page</title>
   <script type="text/javascript" charset="utf-8">
-Clappr.Log.setLevel(0)
 window.onload = function() {
   var player = new Clappr.Player({
-    source: 'http://clappr.io/highline.mp4',
+    source: new URLSearchParams(window.location.search).get('src'),
     poster: 'http://clappr.io/poster.png',
     parentId: '#player-wrapper',
     width: 640, height: 360,
