@@ -15,7 +15,11 @@ window.onload = function() {
     width: 640, height: 360,
     plugins: [ChromecastPlugin],
     chromecast: {
-      appId: '9DFB77C0'
+      appId: '9DFB77C0',
+      media: {
+        title: 'title',
+        subtitle: 'subtitle'
+      }
     }
   });
 }
