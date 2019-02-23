@@ -10,7 +10,7 @@
 window.onload = function() {
   var player = new Clappr.Player({
     source: new URLSearchParams(window.location.search).get('src'),
-    poster: 'http://clappr.io/poster.png',
+    mimeType: 'application/x-mpegURL',
     parentId: '#player-wrapper',
     width: 640, height: 360,
     plugins: [ChromecastPlugin],
