@@ -19,6 +19,13 @@ window.onload = function() {
       media: {
         title: 'title',
         subtitle: 'subtitle'
+      },
+      customData: {
+        async manifestHandler(data) {
+          console.log('manifest handler')
+          console.log(data)
+          return data
+        }
       }
     }
   });
